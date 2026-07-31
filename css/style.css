@@ -293,7 +293,7 @@ ul{ margin:0; padding:0; list-style:none; }
 .contact__email:hover{ border-color: var(--accent); }
 .contact__meta{ display:flex; gap: 1.6rem; justify-content:center; color: var(--text-faint); font-size: .9rem; margin-bottom: 2.4rem; flex-wrap:wrap; }
 .contact__socials{ display:flex; gap: 1.8rem; justify-content:center; flex-wrap:wrap; }
-.contact__socials a{ font-size: .88rem; color: var(--text-dim); border: 1px solid var(--card-border); border-radius: 100px; padding: .6rem 1.3rem; transition: all .2s; }
+.contact__socials a, .contact__discord{ font-size: .88rem; color: var(--text-dim); border: 1px solid var(--card-border); border-radius: 100px; padding: .6rem 1.3rem; transition: all .2s; }
 .contact__socials a:hover{ background: var(--text); color: var(--bg); border-color: var(--text); }
 
 /* ============ Footer ============ */
