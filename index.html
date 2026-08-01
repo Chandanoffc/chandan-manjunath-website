@@ -319,6 +319,26 @@
         <span class="contact__discord">Discord — @mchandan</span>
         <a href="assets/Chandan_Manjunath_CV.pdf" download>Résumé</a>
       </div>
+
+      <form class="contact-form reveal" id="contactForm" action="https://formspree.io/f/mgogjaak" method="POST">
+        <div class="contact-form__row">
+          <div class="field">
+            <label for="cf-name">Name</label>
+            <input type="text" id="cf-name" name="name" required autocomplete="name" />
+          </div>
+          <div class="field">
+            <label for="cf-email">Email</label>
+            <input type="email" id="cf-email" name="email" required autocomplete="email" />
+          </div>
+        </div>
+        <div class="field">
+          <label for="cf-message">What do you need?</label>
+          <textarea id="cf-message" name="message" rows="5" required placeholder="Content, growth, ambassador work, or something else — tell me about it."></textarea>
+        </div>
+        <input type="text" name="_gotcha" class="field--hp" tabindex="-1" autocomplete="off" />
+        <button type="submit" class="btn btn--primary contact-form__submit">Send request</button>
+        <p class="contact-form__status" id="cfStatus" role="status" aria-live="polite"></p>
+      </form>
     </div>
   </section>
 

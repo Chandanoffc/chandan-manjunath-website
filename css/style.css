@@ -296,6 +296,26 @@ ul{ margin:0; padding:0; list-style:none; }
 .contact__socials a, .contact__discord{ font-size: .88rem; color: var(--text-dim); border: 1px solid var(--card-border); border-radius: 100px; padding: .6rem 1.3rem; transition: all .2s; }
 .contact__socials a:hover{ background: var(--text); color: var(--bg); border-color: var(--text); }
 
+.contact-form{ margin-top: 3.5rem; text-align:left; border-top: 1px solid var(--card-border); padding-top: 3rem; }
+.contact-form__row{ display:grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+.field{ margin-bottom: 1.2rem; }
+.field label{ display:block; font-size: .78rem; text-transform:uppercase; letter-spacing:.08em; color: var(--text-faint); margin-bottom: .6rem; }
+.field input, .field textarea{
+  width:100%; background: var(--card); border: 1px solid var(--card-border); border-radius: 10px;
+  padding: .8rem 1rem; color: var(--text); font-family: var(--font-sans); font-size: .95rem;
+  transition: border-color .2s; resize: vertical;
+}
+.field input:focus, .field textarea:focus{ outline:none; border-color: var(--accent); }
+.field--hp{ position:absolute; left:-9999px; width:1px; height:1px; opacity:0; pointer-events:none; }
+.contact-form__submit{ border:none; cursor:pointer; width:100%; }
+.contact-form__status{ margin-top: 1rem; font-size: .88rem; color: var(--text-dim); min-height: 1.2em; }
+.contact-form__status.is-error{ color: #ff6b6b; }
+.contact-form__status.is-success{ color: #6bffb0; }
+
+@media (max-width: 560px){
+  .contact-form__row{ grid-template-columns: 1fr; }
+}
+
 /* ============ Footer ============ */
 .footer{
   display:flex; justify-content:space-between; padding: 2rem var(--edge);

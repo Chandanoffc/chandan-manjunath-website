@@ -56,6 +56,42 @@ document.querySelectorAll('.video-card').forEach(card => {
   }, { once: true });
 });
 
+// Contact form
+const contactForm = document.getElementById('contactForm');
+const cfStatus = document.getElementById('cfStatus');
+if (contactForm) {
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const submitBtn = contactForm.querySelector('.contact-form__submit');
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending…';
+    cfStatus.textContent = '';
+    cfStatus.className = 'contact-form__status';
+
+    try {
+      const res = await fetch(contactForm.action, {
+        method: 'POST',
+        body: new FormData(contactForm),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        contactForm.reset();
+        cfStatus.textContent = "Thanks — that's in my inbox. I'll get back to you soon.";
+        cfStatus.classList.add('is-success');
+      } else {
+        cfStatus.textContent = 'Something went wrong — try again, or email me directly.';
+        cfStatus.classList.add('is-error');
+      }
+    } catch {
+      cfStatus.textContent = 'Network error — try again, or email me directly.';
+      cfStatus.classList.add('is-error');
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Send request';
+    }
+  });
+}
+
 // Cursor glow (desktop only)
 const glow = document.getElementById('cursorGlow');
 if (matchMedia('(hover: hover)').matches) {
