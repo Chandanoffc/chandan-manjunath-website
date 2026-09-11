@@ -21,6 +21,23 @@ mobileMenu.querySelectorAll('a').forEach(a => {
   });
 });
 
+// Scrollspy — highlight the current section's tab
+const navTabs = document.querySelectorAll('.nav__tab');
+const mobileTabs = document.querySelectorAll('.mobile-menu a[href^="#"]');
+const spySections = ['about', 'experience', 'expertise', 'videos', 'contact']
+  .map(id => document.getElementById(id))
+  .filter(Boolean);
+const spy = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const id = entry.target.id;
+      navTabs.forEach(t => t.classList.toggle('is-active', t.getAttribute('href') === `#${id}`));
+      mobileTabs.forEach(t => t.classList.toggle('is-active', t.getAttribute('href') === `#${id}`));
+    }
+  });
+}, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+spySections.forEach(s => spy.observe(s));
+
 // Scroll reveal
 const revealEls = document.querySelectorAll('.reveal');
 const io = new IntersectionObserver((entries) => {
