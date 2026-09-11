@@ -210,6 +210,29 @@ ul{ margin:0; padding:0; list-style:none; }
 .section__head h2{ font-size: clamp(2rem, 4.5vw, 3.2rem); line-height: 1.1; }
 .section__sub{ color: var(--text-dim); margin-top: 1rem; font-size: 1.02rem; }
 
+/* ============ Posts (X) ============ */
+.posts-hero{ text-align:center; padding-top: 10rem; padding-bottom: 3rem; }
+.posts-hero h1{ font-size: clamp(2.6rem, 7vw, 5rem); margin-bottom: 1rem; }
+.posts-hero .section__sub{ max-width: 520px; margin: 1rem auto 0; }
+.posts-hero__link{ color: var(--text); border-bottom: 2px solid var(--accent); }
+.posts-hero__link:hover{ background: var(--accent); }
+
+.posts-section{ padding-top: 1rem; }
+.posts-grid{
+  display:grid; grid-template-columns: repeat(2, 1fr); gap: 1.6rem;
+  max-width: 760px; margin: 0 auto;
+}
+.tweet-embed{ display:flex; justify-content:center; }
+.tweet-embed .twitter-tweet{ margin: 0 !important; }
+.posts-note{
+  text-align:center; color: var(--text-faint); font-size: .88rem;
+  max-width: 480px; margin: 2.5rem auto 0;
+}
+
+@media (max-width: 700px){
+  .posts-grid{ grid-template-columns: 1fr; }
+}
+
 /* ============ About ============ */
 .about__grid{ display:grid; grid-template-columns: 320px 1fr; gap: 4rem; align-items:start; }
 .about__photo{
