@@ -414,24 +414,18 @@ html.cue-scroll .cue { opacity: 1; }
 /* ------------------------------------------------------------------ */
 /* Chapter 03 — work (interim; rebuilt as a cinematic scene next)       */
 /* ------------------------------------------------------------------ */
-.work, .contact { position: relative; background: var(--bg); padding: clamp(5rem, 13vh, 9rem) var(--edge); }
+.work, .contact { position: relative; background: var(--bg); padding: clamp(5rem, 13vh, 9rem) var(--edge); scroll-margin-top: var(--hdr-h); }
 .work__head h2, .contact h2 {
   font-family: var(--f-display); font-weight: 400; text-transform: uppercase; line-height: 1;
   font-size: clamp(2.6rem, 7vw, 6.4rem); margin: 0.5rem 0 1rem;
 }
 .work__lead, .contact__lead { color: var(--dim); max-width: 52ch; }
-.vgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1rem, 2vw, 1.8rem); margin-top: clamp(2rem, 5vh, 3.4rem); }
-.vcard { display: flex; flex-direction: column; gap: 0.45rem; text-align: left; background: none; border: 0; padding: 0; cursor: pointer; }
-.vcard__thumb { position: relative; aspect-ratio: 16 / 9; overflow: hidden; border-radius: 8px; border: 1px solid var(--line); background: #120708; margin-bottom: 0.5rem; }
-.vcard__thumb img { width: 100%; height: 100%; object-fit: cover; filter: saturate(0.8) brightness(0.82); transition: transform 0.6s ease, filter 0.6s ease; }
-.vcard:hover .vcard__thumb img { transform: scale(1.05); filter: none; }
-.vcard__play { position: absolute; inset: 0; margin: auto; width: 54px; height: 54px; border-radius: 50%; display: grid; place-items: center; font-style: normal; font-size: 14px; color: #fff; background: var(--red); box-shadow: 0 10px 30px -6px rgba(225, 38, 45, 0.6); }
-.vcard__thumb iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
-.vcard strong { font-weight: 600; }
-.vcard > span:last-child { color: var(--dim); font-size: 0.88rem; line-height: 1.5; }
-.work__more { margin-top: clamp(2rem, 5vh, 3.4rem); }
-@media (max-width: 900px) { .vgrid { grid-template-columns: 1fr 1fr; } }
-@media (max-width: 600px) { .vgrid { grid-template-columns: 1fr; } }
+/* X embeds: the iframe brings its own card, we just lay them out */
+.xgrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(1rem, 2vw, 1.8rem); margin-top: clamp(2rem, 5vh, 3.4rem); align-items: start; max-width: 1100px; }
+.xcard { display: flex; justify-content: center; min-height: 260px; }
+.xcard .twitter-tweet { margin: 0 !important; width: 100%; }
+.work__more { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: clamp(2rem, 5vh, 3.4rem); }
+@media (max-width: 800px) { .xgrid { grid-template-columns: 1fr; } }
 
 /* ------------------------------------------------------------------ */
 /* Chapter 04 — contact (interim)                                       */

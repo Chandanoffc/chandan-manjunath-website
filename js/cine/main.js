@@ -168,19 +168,8 @@ function initScroll(hero, manifesto, journey) {
 }
 
 /* ------------------------------------------------------------------ */
-/* Interim sections (Work + Contact) — restyled in the next phase       */
+/* Interim contact form — restyled in the next phase                    */
 /* ------------------------------------------------------------------ */
-
-function initWork() {
-  $$('.vcard').forEach((card) => {
-    card.addEventListener('click', () => {
-      const id = card.dataset.yt;
-      const thumb = $('.vcard__thumb', card);
-      thumb.innerHTML = `<iframe src="https://www.youtube.com/embed/${id}?autoplay=1&rel=0" title="YouTube video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
-      card.classList.add('is-playing');
-    }, { once: true });
-  });
-}
 
 function initContact() {
   const form = $('#contactForm');
@@ -214,7 +203,6 @@ function initContact() {
 
 (async function main() {
   initNav();
-  initWork();
   initContact();
 
   const manifesto = initManifesto({ reducedMotion });
