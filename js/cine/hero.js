@@ -239,9 +239,10 @@ function computeLayout(W, H, figAspect) {
     if (h > maxH) { const k = maxH / h; w *= k; h *= k; }
     const cy = 0.585 * H;
     lines = [{ text: 'CHANDAN', ink: [(W - w) / 2, cy - h / 2, w, h] }];
-    const fh = 1.02 * H;
+    // tall enough to bleed off the bottom, but never wide enough to bury the name
+    const fh = Math.min(1.02 * H, (0.46 * W) / figAspect);
     const fw = fh * figAspect;
-    fig = [0.545 * W - fw / 2, 0.105 * H, fw, fh];
+    fig = [0.545 * W - fw / 2, Math.max(0.105 * H, 1.04 * H - fh), fw, fh];
   } else {
     const a1 = measureWord('CHAN').aspect;
     const a2 = measureWord('DAN').aspect;
