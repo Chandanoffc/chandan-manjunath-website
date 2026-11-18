@@ -1,374 +1,345 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="is-booting">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <title>Chandan Manjunath — Content &amp; Growth</title>
 <meta name="description" content="Chandan Manjunath — crypto-native growth &amp; content marketer. Community, content and ecosystem growth across Solana and beyond." />
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22 style=%22background:%23101010%22><rect width=%22100%22 height=%22100%22 fill=%22%23101010%22/><circle cx=%2250%22 cy=%2250%22 r=%2230%22 fill=%22%23d4ff3f%22/></svg>" />
+<meta name="theme-color" content="#050304" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%23050304%22/><circle cx=%2250%22 cy=%2250%22 r=%2228%22 fill=%22%23e1262d%22/></svg>" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" />
-<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Inter:wght@400;500;600;700&family=Oswald:wght@300;400;500;600;700&display=swap" />
+<link rel="stylesheet" href="css/cine.css" />
 </head>
 <body>
 
-<div class="noise"></div>
-<div class="cursor-glow" id="cursorGlow"></div>
+<!-- Real heading for search engines and screen readers; the visible wordmark is drawn on the canvas. -->
+<h1 class="sr-only">Chandan Manjunath — Content &amp; Growth. Crypto-native growth and content marketer based in Bengaluru.</h1>
 
-<header class="nav" id="nav">
-  <a href="#top" class="nav__mark">CM</a>
-  <nav class="nav__tabs" id="navTabs" role="tablist" aria-label="Section navigation">
-    <a href="#about" class="nav__tab">About</a>
-    <a href="#experience" class="nav__tab">Experience</a>
-    <a href="#expertise" class="nav__tab">Expertise</a>
-    <a href="#videos" class="nav__tab">Videos</a>
-    <a href="posts.html" class="nav__tab">Posts</a>
-    <a href="#contact" class="nav__tab">Contact</a>
-  </nav>
-  <a href="assets/Chandan_Manjunath_CV.pdf" class="nav__cta" download>Résumé ↓</a>
-  <button class="nav__burger" id="burger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
-</header>
+<!-- ============================================================ -->
+<!-- Fixed hero stage (canvas + viewfinder HUD). Scrolled over by .flow -->
+<div class="stage" id="stage">
+  <canvas id="heroCanvas" aria-hidden="true"></canvas>
 
-<div class="mobile-menu" id="mobileMenu">
-  <a href="#about">About</a>
-  <a href="#experience">Experience</a>
-  <a href="#expertise">Expertise</a>
-  <a href="#videos">Videos</a>
-  <a href="posts.html">Posts</a>
-  <a href="#contact">Contact</a>
-  <a href="assets/Chandan_Manjunath_CV.pdf" download>Download Résumé</a>
-</div>
-
-<main id="top">
-
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero__bg" aria-hidden="true">
-      <svg class="hero__doodles" viewBox="0 0 1400 900" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M60 130C160 40 300 40 360 130C420 220 340 300 260 260C180 220 220 120 320 140C420 160 460 280 400 360" stroke="var(--doodle)" stroke-opacity="0.5" stroke-width="1.5"/>
-        <circle cx="1180" cy="120" r="70" stroke="var(--doodle)" stroke-opacity="0.4" stroke-width="1.5"/>
-        <path d="M980 60C1040 20 1120 40 1140 100" stroke="var(--doodle)" stroke-opacity="0.4" stroke-width="1.5"/>
-        <path d="M120 620C60 700 100 800 200 820C300 840 340 740 280 700C220 660 160 720 200 780" stroke="var(--doodle)" stroke-opacity="0.35" stroke-width="1.5"/>
-        <path d="M1250 560C1330 540 1380 600 1360 670C1340 740 1260 750 1230 700" stroke="var(--doodle)" stroke-opacity="0.4" stroke-width="1.5"/>
-        <path d="M1000 800C1080 850 1180 830 1220 760" stroke="var(--doodle)" stroke-opacity="0.3" stroke-width="1.5"/>
-      </svg>
-    </div>
-    <div class="hero__grid">
-      <div class="hero__inner">
-        <p class="eyebrow reveal">Content &amp; Growth · Bengaluru, India</p>
-        <h1 class="hero__title">
-          <span class="reveal reveal--1">Chandan</span>
-          <span class="reveal reveal--2 grad-text">Manjunath</span>
-        </h1>
-        <p class="hero__sub reveal reveal--3">
-          Crypto-native growth &amp; content marketer. I write the scripts, direct the shoots,
-          appear on camera, and run the communities — across X, Telegram, Discord, YouTube and Instagram.
-        </p>
-        <div class="hero__cta reveal reveal--4">
-          <a href="#videos" class="btn btn--primary">See the work</a>
-          <a href="#contact" class="btn btn--ghost">Get in touch</a>
-        </div>
-        <div class="hero__socials reveal reveal--4">
-          <a href="https://x.com/AmTheChandan" target="_blank" rel="noopener">X / Twitter</a>
-          <a href="https://www.youtube.com/@redandbold" target="_blank" rel="noopener">YouTube</a>
-          <a href="https://www.instagram.com/redboldtv/" target="_blank" rel="noopener">Instagram</a>
-        </div>
-      </div>
-      <div class="hero__portrait reveal reveal--2" aria-hidden="true">
-        <picture>
-          <source media="(max-width: 760px)" srcset="assets/img/hero-portrait-sm.webp" />
-          <img src="assets/img/hero-portrait.webp" alt="" />
-        </picture>
-      </div>
-    </div>
-    <div class="hero__scroll" aria-hidden="true"><span></span>Scroll</div>
-  </section>
-
-  <!-- MARQUEE -->
-  <div class="marquee">
-    <div class="marquee__track">
-      <span>SOLANA</span><span>·</span><span>COMMUNITY GROWTH</span><span>·</span><span>CONTENT PRODUCTION</span><span>·</span>
-      <span>DEFI</span><span>·</span><span>KOL CAMPAIGNS</span><span>·</span><span>ECOSYSTEM ONBOARDING</span><span>·</span>
-      <span>SOLANA</span><span>·</span><span>COMMUNITY GROWTH</span><span>·</span><span>CONTENT PRODUCTION</span><span>·</span>
-      <span>DEFI</span><span>·</span><span>KOL CAMPAIGNS</span><span>·</span><span>ECOSYSTEM ONBOARDING</span><span>·</span>
-    </div>
+  <!-- Fallback when WebGL is unavailable: same composition in plain DOM -->
+  <div class="stage__fallback" aria-hidden="true">
+    <span class="stage__fbWord">CHANDAN</span>
+    <img class="stage__fbFig" src="assets/img/hero-portrait.webp" alt="" />
   </div>
 
-  <!-- ABOUT -->
-  <section class="section about" id="about">
-    <div class="section__head">
-      <p class="eyebrow reveal">01 · About</p>
-      <h2 class="reveal">I don't just make content<br>about crypto. I live in it.</h2>
-    </div>
-    <div class="about__grid">
-      <div class="about__photo reveal">
-        <img src="assets/img/about-cutout.webp" alt="Chandan Manjunath" />
-        <div class="about__photo-frame"></div>
-      </div>
-      <div class="about__copy reveal">
-        <p>
-          I'm a crypto-native growth and content marketer with 5+ years building communities,
-          producing content, and driving ecosystem growth on Solana and beyond. I've grown
-          communities from zero, onboarded protocols, managed 400,000+ member platforms, and
+  <div class="hud" aria-hidden="true">
+    <i class="hud__c hud__c--tl"></i><i class="hud__c hud__c--tr"></i>
+    <i class="hud__c hud__c--bl"></i><i class="hud__c hud__c--br"></i>
+
+    <p class="hud__rec"><i></i>REC <b id="hudTc">00:00:00:00</b></p>
+    <p class="hud__meta">SCENE 01 &nbsp;/&nbsp; TAKE 01 &nbsp;·&nbsp; 24 FPS</p>
+
+    <p class="welcome" id="welcome">
+      <b class="welcome__dots">•••</b>
+      <span class="welcome__text">Welcome to my corner of crypto</span>
+      <b class="welcome__dots">•••</b>
+    </p>
+
+    <p class="tape tape--l" id="tapeL"><span>•Red &amp; Bold TV•</span></p>
+    <p class="tape tape--r" id="tapeR"><span>•Solana native•</span></p>
+
+    <div class="cue" id="cue"><i></i><span>Scroll</span></div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<header class="hdr" id="hdr">
+  <svg class="hdr__rule" aria-hidden="true" preserveAspectRatio="none">
+    <line x1="0" y1="0.5" x2="100%" y2="0.5" stroke="currentColor" stroke-width="1" vector-effect="non-scaling-stroke" />
+  </svg>
+
+  <a class="hdr__mark" href="#top" aria-label="Chandan Manjunath, home">CHANDAN</a>
+  <span class="hdr__div" aria-hidden="true"></span>
+  <p class="hdr__roles"><span>Creator</span><span>Growth</span><span>Community</span></p>
+
+  <nav class="hdr__nav" aria-label="Primary">
+    <ul>
+      <li><a href="#top" data-nav="top" class="is-active">Home</a></li>
+      <li><a href="#about" data-nav="about">About</a></li>
+      <li><a href="#experience" data-nav="experience">Experience</a></li>
+      <li><a href="#work" data-nav="work">Work</a></li>
+      <li><a href="posts.html">Posts</a></li>
+      <li><a href="#contact" data-nav="contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="hdr__meta">
+    <span class="hdr__metaLabel">Portfolio — MMXXVI</span>
+    <span class="hdr__pips" aria-hidden="true"><i></i><i></i><i></i></span>
+  </div>
+
+  <button class="hdr__burger" id="burger" aria-expanded="false" aria-controls="menu">
+    <span aria-hidden="true"></span><span aria-hidden="true"></span>
+    <span class="sr-only">Menu</span>
+  </button>
+</header>
+
+<nav class="menu" id="menu" aria-label="Primary, expanded" hidden>
+  <ul>
+    <li><a href="#top" data-menu>Home</a></li>
+    <li><a href="#about" data-menu>About</a></li>
+    <li><a href="#experience" data-menu>Experience</a></li>
+    <li><a href="#work" data-menu>Work</a></li>
+    <li><a href="posts.html">Posts</a></li>
+    <li><a href="#contact" data-menu>Contact</a></li>
+    <li><a href="assets/Chandan_Manjunath_CV.pdf" download>Résumé ↓</a></li>
+  </ul>
+</nav>
+
+<!-- ============================================================ -->
+<main class="flow" id="top">
+  <!-- the hero is fixed, so this reserves its scroll height -->
+  <div class="hero-spacer" aria-hidden="true"></div>
+
+  <!-- ====================== CHAPTER 01 — ABOUT ====================== -->
+  <section class="manifesto" id="about" aria-labelledby="manifestoTitle">
+    <div class="manifesto__pin">
+      <p class="eyebrow">Chapter 01 — About</p>
+
+      <h2 class="manifesto__text" id="manifestoTitle" data-manifesto>
+        I don't just make content about <em>crypto</em>. I <em>live</em> in it.
+      </h2>
+
+      <div class="manifesto__body" id="manifestoBody">
+        <p class="manifesto__copy">
+          Crypto-native growth and content marketer with 5+ years building communities,
+          producing content and driving ecosystem growth on Solana and beyond. I've grown
+          communities from zero, onboarded protocols, managed 400,000+ member platforms and
           traded DeFi products firsthand across Kamino, Drift, Jupiter and Perena.
         </p>
-        <p>
-          Alongside that, I create video content — interviews, storytelling, product breakdowns —
-          and build communities on the ground through meet-ups, onboarding and networking that
-          drive sustainable growth and brand trust.
-        </p>
-        <div class="about__facts">
-          <div class="fact">
-            <span class="fact__label">Based in</span>
-            <span class="fact__value">Bengaluru, Karnataka, India</span>
-          </div>
-          <div class="fact">
-            <span class="fact__label">Education</span>
-            <span class="fact__value">B.E. Electronics &amp; Communication — VTU, 2010–2015</span>
-          </div>
-          <div class="fact">
-            <span class="fact__label">Languages</span>
-            <span class="fact__value">English, Hindi, Kannada, German</span>
-          </div>
-          <div class="fact">
-            <span class="fact__label">Certification</span>
-            <span class="fact__value">Safary Club Certified Crypto Marketer — Cohort 4</span>
-          </div>
-        </div>
+
+        <dl class="facts">
+          <div><dt>Based in</dt><dd>Bengaluru, India</dd></div>
+          <div><dt>Education</dt><dd>B.E. Electronics &amp; Communication — VTU, 2010–15</dd></div>
+          <div><dt>Languages</dt><dd>English · Hindi · Kannada · German</dd></div>
+          <div><dt>Certified</dt><dd>Safary Club Crypto Marketer, Cohort 4</dd></div>
+        </dl>
+
+        <a class="btn btn--ghost" href="assets/Chandan_Manjunath_CV.pdf" download>Download résumé ↓</a>
       </div>
     </div>
   </section>
 
-  <!-- EXPERIENCE -->
-  <section class="section experience" id="experience">
-    <div class="section__head">
-      <p class="eyebrow reveal">02 · Experience</p>
-      <h2 class="reveal">Where I've built.</h2>
-    </div>
+  <!-- ====================== CHAPTER 02 — EXPERIENCE ====================== -->
+  <section class="journey" id="experience" aria-labelledby="journeyTitle">
+    <div class="journey__pin" id="journeyPin">
+      <div class="jroom" aria-hidden="true"></div>
 
-    <div class="tabs reveal">
-      <div class="tabs__nav" role="tablist">
-        <button class="tabs__btn is-active" role="tab" aria-selected="true" data-tab="work">Work Experience</button>
-        <button class="tabs__btn" role="tab" aria-selected="false" data-tab="projects">Projects</button>
-      </div>
+      <h2 class="jtitle" id="journeyTitle"><span>A</span><span>Journey</span><span>Through</span><span>Time</span></h2>
 
-      <div class="tabs__panel is-active" data-panel="work">
-        <div class="wx-grid">
-          <article class="wx-card">
-            <div class="wx-card__date">Mar — Jun 2026</div>
-            <h3>Content Production <span>· Bitget Wallet</span></h3>
-            <p>Video series on perps trading — from fundamentals to execution.</p>
-          </article>
-          <article class="wx-card">
-            <div class="wx-card__date">Nov 2025 — May 2026</div>
-            <h3>Ambassador <span>· Takara Lend</span></h3>
-            <p>Content strategy, AMA-led onboarding, and continuous product feedback.</p>
-          </article>
-          <article class="wx-card">
-            <div class="wx-card__date">Apr 2025 — Mar 2026</div>
-            <h3>Community Leader <span>· Sei Network</span></h3>
-            <p>Grew X community 283% in 6 months; ran daily Discord &amp; Telegram operations.</p>
-          </article>
-          <article class="wx-card">
-            <div class="wx-card__date">Nov 2024 — Present</div>
-            <h3>Content Lead &amp; Ambassador <span>· UpRock AI &amp; Dabba Network</span></h3>
-            <p>Monthly content strategy, short-form production, IRL brand representation.</p>
-          </article>
-        </div>
-      </div>
+      <svg class="jclock" id="jclock" aria-hidden="true" focusable="false">
+        <defs>
+          <linearGradient id="gBeam" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#ff5a36" stop-opacity="0.9" />
+            <stop offset="1" stop-color="#e1262d" stop-opacity="0.05" />
+          </linearGradient>
+          <radialGradient id="gPivot" cx="38%" cy="32%" r="70%">
+            <stop offset="0" stop-color="#ffd9c9" />
+            <stop offset="0.35" stop-color="#e86b50" />
+            <stop offset="1" stop-color="#3a0b0c" />
+          </radialGradient>
+          <filter id="fBlur" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="14" /></filter>
+          <filter id="fGlow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="4" /></filter>
+        </defs>
+        <circle id="dRing"  fill="none" />
+        <circle id="dTicks" fill="none" />
+        <g id="dLabels"></g>
+        <polygon id="beamSoft" filter="url(#fBlur)" />
+        <polygon id="beam" />
+        <line id="hand" />
+        <line id="handGlow" filter="url(#fGlow)" />
+        <circle id="tip" />
+        <circle id="pivot" />
+      </svg>
 
-      <div class="tabs__panel" data-panel="projects">
-        <div class="proj-grid">
-          <article class="proj-card">
-            <h3>MonkeDAO</h3>
-            <p>Ambassador — community meet-ups &amp; network growth.</p>
-          </article>
-          <article class="proj-card">
-            <h3>AllDomains</h3>
-            <p>Content Creator — onboarding &amp; product videos.</p>
-          </article>
-          <article class="proj-card">
-            <h3>Solflare</h3>
-            <p>Guardian &amp; Beta Tester — wallet testing &amp; feedback.</p>
-          </article>
-          <article class="proj-card">
-            <h3>Jupiter Uplink</h3>
-            <p>Content Creator — onboarding &amp; explainer content.</p>
-          </article>
-          <article class="proj-card">
-            <h3>Wolfswap</h3>
-            <p>Growth &amp; Marketing.</p>
-          </article>
-          <article class="proj-card">
-            <h3>The Chads</h3>
-            <p>Research &amp; Media.</p>
-          </article>
-        </div>
-      </div>
-    </div>
-  </section>
+      <svg class="jfloor" id="jfloor" aria-hidden="true" focusable="false" viewBox="0 0 600 220">
+        <defs>
+          <radialGradient id="gPool" cx="50%" cy="50%" r="50%">
+            <stop offset="0" stop-color="#ff5a36" stop-opacity="0.35" />
+            <stop offset="1" stop-color="#ff5a36" stop-opacity="0" />
+          </radialGradient>
+        </defs>
+        <ellipse cx="300" cy="110" rx="290" ry="100" fill="url(#gPool)" />
+        <ellipse class="ring r1" cx="300" cy="110" rx="285" ry="86" />
+        <ellipse class="ring r2" cx="300" cy="110" rx="215" ry="64" />
+        <ellipse class="ring r3" cx="300" cy="110" rx="140" ry="42" />
+        <ellipse class="ring r4" cx="300" cy="110" rx="70"  ry="21" />
+      </svg>
 
-  <!-- EXPERTISE -->
-  <section class="section expertise" id="expertise">
-    <div class="section__head">
-      <p class="eyebrow reveal">03 · Expertise</p>
-      <h2 class="reveal">Core strengths.</h2>
-    </div>
-    <div class="expertise__grid">
-      <div class="exp-card reveal">
-        <h3>Strategy</h3>
-        <p>Social media strategy &amp; growth, analytics and reporting across every stage of a launch.</p>
-        <div class="tag-row"><span>Growth Strategy</span><span>Analytics &amp; Reporting</span></div>
-      </div>
-      <div class="exp-card reveal">
-        <h3>Content</h3>
-        <p>Short-form video, founder interviews and storytelling content — scripted, shot, edited and published.</p>
-        <div class="tag-row"><span>Short-form Video</span><span>Founder Interviews</span><span>Marketing on X</span></div>
-      </div>
-      <div class="exp-card reveal">
-        <h3>Community</h3>
-        <p>Discord and Telegram moderation, community management at scale, and KOL &amp; influencer relations.</p>
-        <div class="tag-row"><span>Discord/Telegram Mod</span><span>Community Ops</span><span>KOL Relations</span></div>
-      </div>
-      <div class="exp-card reveal">
-        <h3>Analytics &amp; Tools</h3>
-        <p>Tracking engagement across Instagram, X and YouTube to optimize timing, format and performance.</p>
-        <div class="tag-row"><span>Dune</span><span>DefiLlama</span><span>Nansen</span><span>CoinMarketCap</span></div>
-      </div>
-      <div class="exp-card reveal">
-        <h3>Production Tools</h3>
-        <p>End-to-end video production — from script to publish.</p>
-        <div class="tag-row"><span>CapCut Pro</span><span>Final Cut Pro</span><span>Adobe Suite</span><span>Canva</span></div>
-      </div>
-      <div class="exp-card reveal">
-        <h3>Hands-on DeFi</h3>
-        <p>Trading DeFi products firsthand — I understand the products before I market them.</p>
-        <div class="tag-row"><span>Kamino</span><span>Drift</span><span>Jupiter</span><span>Perena</span></div>
-      </div>
-    </div>
-  </section>
+      <img class="jfig" id="jfig" src="assets/img/about-cutout.webp" alt="" draggable="false" />
 
-  <!-- VIDEOS -->
-  <section class="section videos" id="videos">
-    <div class="section__head">
-      <p class="eyebrow reveal">04 · Videos</p>
-      <h2 class="reveal">Video samples.</h2>
-      <p class="section__sub reveal">A few picks from Red &amp; Bold TV — onboarding, interviews and IRL coverage across the ecosystem.</p>
-    </div>
+      <ol class="jdeck" id="jdeck">
+        <li>
+          <button class="jcard" type="button" data-label="Then" data-short="2010">
+            <span class="jcard__date">2010 — 2015</span>
+            <span class="jcard__year">Then</span>
+            <strong class="jcard__role">B.E. Electronics &amp; Communication</strong>
+            <span class="jcard__org">Visvesvarayya Technological University</span>
+            <span class="jcard__more">Engineering first. Crypto found me later — and never let go.</span>
+          </button>
+        </li>
+        <li>
+          <button class="jcard" type="button" data-label="Nov ’24" data-short="2024">
+            <span class="jcard__date">Nov 2024 — Present</span>
+            <span class="jcard__year">2024</span>
+            <strong class="jcard__role">Content Lead &amp; Ambassador</strong>
+            <span class="jcard__org">UpRock AI · Dabba Network</span>
+            <span class="jcard__more">Monthly content strategy, short-form production and IRL brand representation.</span>
+          </button>
+        </li>
+        <li>
+          <button class="jcard" type="button" data-label="Apr ’25" data-short="2025">
+            <span class="jcard__date">Apr 2025 — Mar 2026</span>
+            <span class="jcard__year">2025</span>
+            <strong class="jcard__role">Community Leader</strong>
+            <span class="jcard__org">Sei Network</span>
+            <span class="jcard__more">Grew the X community 283% in six months; ran daily Discord &amp; Telegram operations.</span>
+          </button>
+        </li>
+        <li>
+          <button class="jcard" type="button" data-label="Nov ’25" data-short="2025">
+            <span class="jcard__date">Nov 2025 — May 2026</span>
+            <span class="jcard__year">2025</span>
+            <strong class="jcard__role">Ambassador</strong>
+            <span class="jcard__org">Takara Lend</span>
+            <span class="jcard__more">Content strategy, AMA-led onboarding and continuous product feedback.</span>
+          </button>
+        </li>
+        <li>
+          <button class="jcard" type="button" data-label="Mar ’26" data-short="2026">
+            <span class="jcard__date">Mar — Jun 2026</span>
+            <span class="jcard__year">2026</span>
+            <strong class="jcard__role">Content Production</strong>
+            <span class="jcard__org">Bitget Wallet</span>
+            <span class="jcard__more">A video series on perps trading — from fundamentals to execution.</span>
+          </button>
+        </li>
+        <li>
+          <button class="jcard jcard--next" type="button" data-label="Now" data-short="Next">
+            <span class="jcard__date">What's next</span>
+            <span class="jcard__year">Now</span>
+            <strong class="jcard__role">Open to the next chapter</strong>
+            <span class="jcard__org">Growth · Content · Ambassador</span>
+            <span class="jcard__more">Let's build something worth talking about. <a href="#contact">Say hello →</a></span>
+          </button>
+        </li>
+      </ol>
 
-    <div class="video-collage">
-      <div class="video-card video-card--feature reveal" data-yt="e2eHtDCoY50">
-        <div class="video-card__thumb">
-          <img loading="lazy" src="https://img.youtube.com/vi/e2eHtDCoY50/hqdefault.jpg" alt="Inside Dabba Network — Exclusive Talk with Co-Founder Shubhs" />
-          <span class="video-card__play">▶</span>
-        </div>
-        <h3>Inside Dabba Network</h3>
-        <p>Exclusive talk with Co-Founder Shubhs — origin, decentralisation &amp; the future.</p>
-      </div>
+      <p class="jhint" aria-hidden="true"><span class="jhint__a">Move</span><span class="jhint__b">to travel</span><span class="jhint__c">through time</span><i></i></p>
+      <p class="jnote jnote--bl" aria-hidden="true">Same<br>curiosity<br>a bigger<br>stage</p>
+      <p class="jlive sr-only" id="jlive" aria-live="polite"></p>
 
-      <div class="video-card video-card--tilt-r reveal" data-yt="d0KaP26-RUY">
-        <div class="video-card__thumb">
-          <img loading="lazy" src="https://img.youtube.com/vi/d0KaP26-RUY/hqdefault.jpg" alt="Brewing Web3 Coffee with Raposa Coffee" />
-          <span class="video-card__play">▶</span>
-        </div>
-        <h3>Brewing Web3 Coffee</h3>
-        <p>On the ground with @raposacoffee — premier coffee on Solana.</p>
-      </div>
-
-      <a class="video-poster reveal" href="https://www.youtube.com/@redandbold" target="_blank" rel="noopener">
-        <span class="video-poster__eyebrow">Red &amp; Bold TV</span>
-        <span class="video-poster__headline">On<br>Set<span class="video-poster__dot">.</span></span>
-        <p class="video-poster__body">Since 2024 I've been the face behind Red &amp; Bold TV — onboarding founders, breaking down DeFi and showing up wherever the ecosystem is building.</p>
-        <span class="video-poster__cta">Watch on YouTube →</span>
-      </a>
-
-      <div class="video-card video-card--tilt-l reveal" data-yt="6QL3csLognY">
-        <div class="video-card__thumb">
-          <img loading="lazy" src="https://img.youtube.com/vi/6QL3csLognY/hqdefault.jpg" alt="Singapore diaries with KAST Card" />
-          <span class="video-card__play">▶</span>
-        </div>
-        <h3>Singapore Diaries</h3>
-        <p>On location with @KASTcard for a look at real-world crypto spending.</p>
-      </div>
-
-      <div class="video-card reveal" data-yt="9c0hPYX3RvE">
-        <div class="video-card__thumb">
-          <img loading="lazy" src="https://img.youtube.com/vi/9c0hPYX3RvE/hqdefault.jpg" alt="Onboarding to Jupiter Mobile" />
-          <span class="video-card__play">▶</span>
-        </div>
-        <h3>Onboarding to Jupiter Mobile</h3>
-        <p>Hands-on walkthrough of Solana's fastest mobile trading app.</p>
-      </div>
-
-      <div class="video-card video-card--tilt-r reveal" data-yt="H9_UUrFwVRY">
-        <div class="video-card__thumb">
-          <img loading="lazy" src="https://img.youtube.com/vi/H9_UUrFwVRY/hqdefault.jpg" alt="Stop Walking For Free — the app paying India in crypto and INR" />
-          <span class="video-card__play">▶</span>
-        </div>
-        <h3>Stop Walking For Free</h3>
-        <p>The app paying India in crypto and INR — walk, earn, repeat.</p>
-      </div>
-
-      <div class="video-card video-card--feature reveal" data-yt="0l2l3vPPEnU">
-        <div class="video-card__thumb">
-          <img loading="lazy" src="https://img.youtube.com/vi/0l2l3vPPEnU/hqdefault.jpg" alt="The BEST Web3 Event I've Ever Attended — Solana Breakpoint 2025 Wrapped" />
-          <span class="video-card__play">▶</span>
-        </div>
-        <h3>Solana Breakpoint 2025, Wrapped</h3>
-        <p>The best Web3 event I've ever attended — recap from the ground in the UAE.</p>
-      </div>
+      <ul class="jrail" id="jrail" aria-label="Timeline"></ul>
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section class="section contact" id="contact">
+  <!-- ====================== CHAPTER 03 — WORK (interim) ====================== -->
+  <section class="work" id="work" aria-labelledby="workTitle">
+    <div class="work__head">
+      <p class="eyebrow">Chapter 03 — Work</p>
+      <h2 id="workTitle">Video samples</h2>
+      <p class="work__lead">A few picks from Red &amp; Bold TV — onboarding, interviews and IRL coverage across the ecosystem.</p>
+    </div>
+
+    <div class="vgrid">
+      <button class="vcard" type="button" data-yt="e2eHtDCoY50">
+        <span class="vcard__thumb"><img loading="lazy" src="https://img.youtube.com/vi/e2eHtDCoY50/hqdefault.jpg" alt="" /><i class="vcard__play">▶</i></span>
+        <strong>Inside Dabba Network</strong>
+        <span>Exclusive talk with Co-Founder Shubhs — origin, decentralisation &amp; the future.</span>
+      </button>
+      <button class="vcard" type="button" data-yt="d0KaP26-RUY">
+        <span class="vcard__thumb"><img loading="lazy" src="https://img.youtube.com/vi/d0KaP26-RUY/hqdefault.jpg" alt="" /><i class="vcard__play">▶</i></span>
+        <strong>Brewing Web3 Coffee</strong>
+        <span>On the ground with @raposacoffee — premier coffee on Solana.</span>
+      </button>
+      <button class="vcard" type="button" data-yt="6QL3csLognY">
+        <span class="vcard__thumb"><img loading="lazy" src="https://img.youtube.com/vi/6QL3csLognY/hqdefault.jpg" alt="" /><i class="vcard__play">▶</i></span>
+        <strong>Singapore Diaries</strong>
+        <span>On location with @KASTcard for a look at real-world crypto spending.</span>
+      </button>
+      <button class="vcard" type="button" data-yt="9c0hPYX3RvE">
+        <span class="vcard__thumb"><img loading="lazy" src="https://img.youtube.com/vi/9c0hPYX3RvE/hqdefault.jpg" alt="" /><i class="vcard__play">▶</i></span>
+        <strong>Onboarding to Jupiter Mobile</strong>
+        <span>Hands-on walkthrough of Solana's fastest mobile trading app.</span>
+      </button>
+      <button class="vcard" type="button" data-yt="H9_UUrFwVRY">
+        <span class="vcard__thumb"><img loading="lazy" src="https://img.youtube.com/vi/H9_UUrFwVRY/hqdefault.jpg" alt="" /><i class="vcard__play">▶</i></span>
+        <strong>Stop Walking For Free</strong>
+        <span>The app paying India in crypto and INR — walk, earn, repeat.</span>
+      </button>
+      <button class="vcard" type="button" data-yt="0l2l3vPPEnU">
+        <span class="vcard__thumb"><img loading="lazy" src="https://img.youtube.com/vi/0l2l3vPPEnU/hqdefault.jpg" alt="" /><i class="vcard__play">▶</i></span>
+        <strong>Solana Breakpoint 2025, Wrapped</strong>
+        <span>The best Web3 event I've ever attended — recap from the ground in the UAE.</span>
+      </button>
+    </div>
+
+    <p class="work__more"><a class="btn btn--ghost" href="https://www.youtube.com/@redandbold" target="_blank" rel="noopener">Watch more on YouTube →</a></p>
+  </section>
+
+  <!-- ====================== CHAPTER 04 — CONTACT (interim) ====================== -->
+  <section class="contact" id="contact" aria-labelledby="contactTitle">
     <div class="contact__inner">
-      <p class="eyebrow reveal">05 · Contact</p>
-      <h2 class="reveal">Let's build something<br><span class="grad-text">worth talking about.</span></h2>
-      <p class="contact__sub reveal">Open to growth, content and ambassador roles across crypto and beyond.</p>
-      <a href="mailto:chandansnft@gmail.com" class="contact__email reveal">chandansnft@gmail.com</a>
-      <div class="contact__meta reveal">
-        <span>Bengaluru, Karnataka, India</span>
-      </div>
-      <div class="contact__socials reveal">
-        <a href="https://x.com/AmTheChandan" target="_blank" rel="noopener">X</a>
-        <a href="https://www.youtube.com/@redandbold" target="_blank" rel="noopener">YouTube</a>
-        <a href="https://www.instagram.com/redboldtv/" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://t.me/chandansgram" target="_blank" rel="noopener">Telegram</a>
-        <span class="contact__discord">Discord — @mchandan</span>
-        <a href="assets/Chandan_Manjunath_CV.pdf" download>Résumé</a>
-      </div>
+      <p class="eyebrow">Chapter 04 — Contact</p>
+      <h2 id="contactTitle">Let's build something <em>worth talking about.</em></h2>
+      <p class="contact__lead">Open to growth, content and ambassador roles across crypto and beyond.</p>
+      <a class="contact__mail" href="mailto:chandansnft@gmail.com">chandansnft@gmail.com</a>
 
-      <form class="contact-form reveal" id="contactForm" action="https://formspree.io/f/mgogjaak" method="POST">
-        <div class="contact-form__row">
-          <div class="field">
-            <label for="cf-name">Name</label>
-            <input type="text" id="cf-name" name="name" required autocomplete="name" />
-          </div>
-          <div class="field">
-            <label for="cf-email">Email</label>
-            <input type="email" id="cf-email" name="email" required autocomplete="email" />
-          </div>
+      <ul class="contact__social">
+        <li><a href="https://x.com/AmTheChandan" target="_blank" rel="noopener">X</a></li>
+        <li><a href="https://www.youtube.com/@redandbold" target="_blank" rel="noopener">YouTube</a></li>
+        <li><a href="https://www.instagram.com/redboldtv/" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://t.me/chandansgram" target="_blank" rel="noopener">Telegram</a></li>
+        <li><span>Discord — @mchandan</span></li>
+      </ul>
+
+      <form class="cform" id="contactForm" action="https://formspree.io/f/mgogjaak" method="POST">
+        <div class="cform__row">
+          <label class="field"><span>Name</span><input type="text" name="name" required autocomplete="name" /></label>
+          <label class="field"><span>Email</span><input type="email" name="email" required autocomplete="email" /></label>
         </div>
-        <div class="field">
-          <label for="cf-message">What do you need?</label>
-          <textarea id="cf-message" name="message" rows="5" required placeholder="Content, growth, ambassador work, or something else — tell me about it."></textarea>
-        </div>
+        <label class="field"><span>What do you need?</span>
+          <textarea name="message" rows="5" required placeholder="Content, growth, ambassador work, or something else — tell me about it."></textarea>
+        </label>
         <input type="text" name="_gotcha" class="field--hp" tabindex="-1" autocomplete="off" />
-        <button type="submit" class="btn btn--primary contact-form__submit">Send request</button>
-        <p class="contact-form__status" id="cfStatus" role="status" aria-live="polite"></p>
+        <button class="btn btn--solid" type="submit" id="cformBtn">Send request</button>
+        <p class="cform__status" id="cformStatus" role="status" aria-live="polite"></p>
       </form>
     </div>
-  </section>
 
+    <footer class="foot">
+      <span>© <span id="year"></span> Chandan Manjunath</span>
+      <span>Built for the next launch.</span>
+    </footer>
+  </section>
 </main>
 
-<footer class="footer">
-  <span>© <span id="year"></span> Chandan Manjunath</span>
-  <span>Built for the next launch.</span>
-</footer>
+<div class="film" aria-hidden="true"></div>
 
-<script src="js/main.js"></script>
+<div class="boot" id="boot" role="status" aria-live="polite">
+  <div class="boot__bar"><i id="bootFill"></i></div>
+  <p class="boot__label">Loading</p>
+</div>
+
+<noscript><style>
+  .boot{display:none!important}
+  .stage__fallback{display:block!important}
+  .hdr{opacity:1!important;transform:none!important}
+  .manifesto{height:auto!important}.manifesto__pin{position:static!important;height:auto!important;padding-top:7rem!important}
+  .manifesto__body{opacity:1!important;transform:none!important}
+  .journey{height:auto!important}.journey__pin{position:static!important;height:auto!important;padding:6rem 1.25rem 3rem!important}
+  .jclock,.jfloor,.jfig,.jhint,.jnote,.jrail,.jroom{display:none!important}
+  .jdeck{position:static!important;display:grid;gap:12px;perspective:none!important}
+  .jcard{position:static!important;width:auto!important;height:auto!important;transform:none!important;opacity:1!important;filter:none!important}
+  .jcard__more{opacity:1!important;transform:none!important}
+</style></noscript>
+
+<script type="module" src="js/cine/main.js"></script>
 </body>
 </html>
